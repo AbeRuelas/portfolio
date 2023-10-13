@@ -13,15 +13,5 @@ namespace WePair.Services.Interfaces
         Paged<Organization> SelectByCategory(int pageIndex, int pageSize, int id);
         Paged<Organization> SearchPaginated(int pageIndex, int pageSize, string query);
         void Update(OrganizationUpdateRequest model, int currentUser);
-        void Delete(int id);
-        public int AddOrgMember(OrgMemberAddRequest model, int inviteId);
-        public void UpdateOM(OrgMemberUpdateRequest model);
-        public void DeleteOM(int id);
-        public OrgMember OMSelectById(int id);
-        public Paged<OrgMember> OMSelectByOrgId_Paginated(int orgId, int pageIndex, int pageSize);
-        public Paged<OrgMember> OMSearchByPagination(int pageIndex, int pageSize, string query);
-        public int InviteOrgMember(OrgInviteMemberAddRequest model, int userId, string token);
-        public void DeleteInviteMem(int id);
-        public OrgInviteMembers ConfirmInvite(string token, int userId);
     }
 }
