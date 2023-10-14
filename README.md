@@ -1,4 +1,4 @@
-# WePairHealth
+# WePair Health
 ## My portfolio is the work I accomplished at WePair Health, a dynamic and intuitive platform that connects community healthcare workers with exceptional healthcare providers, emphasizing job flexibility, pay transparency, and zero fees. WePair Health is currently in its MVP stage. Due to the proprietary nature of the code, I can provide only code snippets. This repository contains SQL, .NET, and React code.
 
 My role as a software engineer was to implement the onboarding process for healthcare organizations. I was required to handle all the coding from the backend to the frontend. Below is a list of the actions I took to accomplish my tasks.
