@@ -1,15 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { Row, Col, Image, Container } from "react-bootstrap";
-import PropTypes from "prop-types";
-import debug from "wepair-debug";
-import organizationService from "services/organizationService";
-import "./organizationsinglelist.css";
-const _logger = debug.extend("organization");
 
 function OrganizationSingleList() {
   const [orgArticle, setOrgArticle] = useState();
-
   const { id } = useParams();
 
   useEffect(() => {
@@ -17,7 +8,6 @@ function OrganizationSingleList() {
   }, [id]);
 
   const onPageSuccess = (response) => {
-    _logger("onPageSuccess", response);
     setOrgArticle((prevState) => {
       return {
         ...prevState,
@@ -25,7 +15,6 @@ function OrganizationSingleList() {
       };
     });
   };
-  _logger("response", orgArticle);
 
   const onPageError = (error) => {
     _logger("onPageError", error);
