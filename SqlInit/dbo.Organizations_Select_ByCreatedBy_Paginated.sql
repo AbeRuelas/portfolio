@@ -1,17 +1,3 @@
-USE [wepairhealth]
-GO
-/****** Object:  StoredProcedure [dbo].[Organizations_Select_ByCreatedBy_Paginated] ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-
--- =============================================
--- Author: Abe Ruelas
--- Create date: 8/25/23
--- Description: Select_ByCreatedBy_Paginated proc Organizations table 
-
--- =============================================
 
 ALTER PROC [dbo].[Organizations_Select_ByCreatedBy_Paginated]
 			@PageIndex int
@@ -29,7 +15,6 @@ AS
 			@PageIndex
 			,@PageSize
 			,@CreatedBy
-  
 */
 BEGIN
 
@@ -47,12 +32,12 @@ DECLARE @offset int = @PageIndex * @PageSize
 		  ,lt.[Name] as LocationName
 		  ,l.[LineOne]
 		  ,l.[LineTwo]
-	      ,l.[City]
-	      ,l.[Zip]
+	          ,l.[City]
+	          ,l.[Zip]
 		  ,l.[StateId]
 		  ,s.[Name] as StateName
 		  ,l.[Latitude]
-	      ,l.[Longitude]
+	          ,l.[Longitude]
 		  ,l.[DateCreated]
 		  ,l.[DateModified]
 		  ,o.[Phone]
@@ -79,6 +64,5 @@ DECLARE @offset int = @PageIndex * @PageSize
 
 	  OFFSET @offset Rows
 	  FETCH NEXT @PageSize Rows ONLY
-
 
 END
