@@ -1,17 +1,4 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using WePair.Models;
-using WePair.Models.Domain.Organizations;
-using WePair.Models.Requests.Email;
-using WePair.Models.Requests.Organizations;
-using WePair.Services;
-using WePair.Services.Interfaces;
-using WePair.Web.Controllers;
-using WePair.Web.Models.Responses;
-using System;
 
-namespace WePair.Web.Api.Controllers
 {
     [Route("api/organizations")]
     [ApiController]
