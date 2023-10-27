@@ -1,15 +1,5 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Card, Row, Col, Image } from "react-bootstrap";
-import PropTypes from "prop-types";
-import debug from "wepair-debug";
-import "./OrganizationCard.css";
-
-const _logger = debug.extend("organization");
 
 function OrganizationCard({ newOrg }) {
-  _logger("props are passing", newOrg);
-
   const navigate = useNavigate();
   const handleImageClick = () => {
     navigate(`/organization/single/${newOrg.id}`);
