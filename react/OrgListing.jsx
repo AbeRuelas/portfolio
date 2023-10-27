@@ -1,16 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
-import { Col, Row, Form, Container } from "react-bootstrap";
-import Pagination from "rc-pagination";
-import "rc-pagination/assets/index.css";
-import "./OrganizationForm.css";
-import lookUpService from "services/lookUpService";
-import * as helper from "../../helper/utils";
-import debug from "wepair-debug";
-import OrganizationCard from "./OrganizationCard";
-import OrganizationCardFullWidth from "./OrganizationCardFullWidth";
-import organizationService from "../../services/organizationService";
-import { ReactComponent as CircleX } from "../../assets/images/icons/circlex.svg";
-const _logger = debug.extend("organization");
+
 const OrganizationListing = () => {
   const [organizationData, setOrganizationData] = useState({
     arrayOfOrganizations: [],
@@ -60,7 +48,6 @@ const OrganizationListing = () => {
     _logger("onLookError", error);
   };
   const onChangePage = (page) => {
-    _logger("settingCurrentPage", page);
     setOrganizationData((prevState) => {
       let newState = { ...prevState };
       newState.currentPage = page;
