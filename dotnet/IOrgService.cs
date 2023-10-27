@@ -1,8 +1,4 @@
-using WePair.Models;
-using WePair.Models.Domain.Organizations;
-using WePair.Models.Requests.Organizations;
 
-namespace WePair.Services.Interfaces
 {
     public interface IOrganizationService
     {
