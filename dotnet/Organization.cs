@@ -1,8 +1,4 @@
-using System;
-using WePair.Models.Domain.Locations;
-using WePair.Models.Domain.Users;
 
-namespace WePair.Models.Domain.Organizations
 {
     public class Organization : BaseOrganization
     {
