@@ -1,19 +1,3 @@
-import React, { useState, useEffect } from "react";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Col, Row, Card, Container, Breadcrumb, Image } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
-import organizationSchema from "../../schema/organizationSchema";
-import organizationService from "../../services/organizationService";
-import lookUpService from "services/lookUpService";
-import * as helper from "../../helper/utils";
-import debug from "wepair-debug";
-import Swal from "sweetalert2";
-import "./OrganizationForm.css";
-import LocationForm from "components/locations/LocationForm";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-import { CKEditor } from "@ckeditor/ckeditor5-react";
-
-const _logger = debug.extend("organization");
 
 function OrganizationForm() {
   const [lookUpData, setLookUpType] = useState({
@@ -62,7 +46,6 @@ function OrganizationForm() {
   }, []);
 
   const onLookSuccess = (response) => {
-    _logger("onLookSuccess", response);
     const { organizationTypes } = response.item;
 
     setLookUpType((prevState) => {
@@ -80,8 +63,6 @@ function OrganizationForm() {
   };
 
   function handleSubmit(values, { setSubmitting, resetForm }) {
-    _logger("onHandleSubmit", values);
-
     organizationService
       .add(values)
       .then((response) => {
@@ -93,7 +74,6 @@ function OrganizationForm() {
   }
 
   const onSubmitSuccess = (response, resetForm) => {
-    _logger("Post organization success", response, resetForm);
     Swal.fire({
       title: "Organization has been created!",
       showDenyButton: true,
@@ -121,7 +101,6 @@ function OrganizationForm() {
   }
 
   const handleLocationSuccess = (response) => {
-    _logger("handleLocationSuccess", response);
     setOrgData((prevState) => {
       let newState = { ...prevState };
       newState.initialValues.locationId = response;
