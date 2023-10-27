@@ -1,18 +1,4 @@
-using WePair.Data;
-using WePair.Data.Providers;
-using WePair.Models;
-using WePair.Models.Domain.Users;
-using WePair.Models.Domain.Organizations;
-using WePair.Services.Interfaces;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
-using WePair.Models.Requests.Organizations;
-using System.Linq;
-using WePair.Models.Domain;
-using WePair.Models.Enums;
 
-namespace WePair.Services
 {
     public class OrganizationService : IOrganizationService
     {
